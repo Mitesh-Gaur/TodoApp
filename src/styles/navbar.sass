@@ -1,0 +1,39 @@
+:root
+  --header-color: #dfdfdf
+  --divider-color: #3c3c3c
+  
+.navbar
+  background-color: var(--header-color)
+  padding: .1rem
+
+  &-container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: calc(100% - 2rem)
+    margin: 0 auto
+
+    @media screen and (min-width: 48rem)
+      width: calc(100% - 32rem)
+      
+
+  &-logo
+    width: 65px
+    // height: 65px
+  
+  .nav-list
+    list-style: none
+    display: flex
+
+    .nav-item:not(:last-child)
+      margin-right: 1rem
+    
+    .nav-item
+      .nav-link
+        text-decoration: none
+        text-transform: uppercase
+
+        &.active
+          border-bottom: 2px solid var(--divider-color)
+          padding-bottom: 1rem
+  
